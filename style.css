@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
+}
+
+.wrapper {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper .icon {
+  margin: 0 25px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.wrapper .icon span {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  z-index: 2;
+  border-radius: 50%;
+  box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  position: relative;
+  transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon span i {
+  line-height: 50px;
+  font-size: 23px;
+}
+
+.wrapper .icon .tooltip {
+  position: absolute;
+  top: 0;
+  background-color: #fff;
+  color: #fff;
+  padding: 10px 15px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 30px;
+  width: 130px;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 1;
+  pointer-events: none;
+  box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+  transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -70px;
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover span, .wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0,0,0,0.4);
+}
+
+.wrapper .icon .tooltip::after {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  bottom: -7.5px;
+  left: 50%;
+  margin-left: -7.5px;
+  background-color: #fff;
+  transform: rotate(45deg);
+  transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover {
+  color: #fff;
+}
+
+/* background-color changer */
+.wrapper .facebook:hover span, .facebook:hover .tooltip, .facebook:hover .tooltip::after {
+  background-color: #214ca8;
+}
+
+.wrapper .twitter:hover span, .twitter:hover .tooltip, .twitter:hover .tooltip::after {
+  background-color: #46C1F6;
+}
+
+.wrapper .instagram:hover span, .instagram:hover .tooltip, .instagram:hover .tooltip::after {
+  background-color: #e1306c;
+}
+
+.wrapper .github:hover span, .github:hover .tooltip, .github:hover .tooltip::after {
+  background-color: #333;
+}
+
+.wrapper .youtube:hover span, .youtube:hover .tooltip, .youtube:hover .tooltip:after {
+  background-color: #DE463B;
+}
+
+@media all and (max-width: 576px) {
+  .wrapper {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .wrapper .icon.facebook .tooltip::after, .wrapper .icon.instagram .tooltip::after, .wrapper .icon.youtube .tooltip::after {
+    left: 120px;
+    bottom: 33%;
+    margin-left: 0;
+  }
+  .wrapper .icon.twitter .tooltip::after, .wrapper .icon.github .tooltip::after {
+    left: -5px;
+    bottom: 33%;
+    margin-left: 0;
+  }
+  .wrapper .icon:hover.facebook .tooltip, .wrapper .icon:hover.instagram .tooltip, .wrapper .icon:hover.youtube .tooltip {
+    top: 1px;
+    margin-right: 250px;
+    width: 130px;
+  }
+  .wrapper .icon:hover.twitter .tooltip, .wrapper .icon:hover.github .tooltip {
+    top: 1px;
+    margin-left: 250px;
+    width: 130px;
+  }
+  body {
+    background: linear-gradient(315deg, #e6e6e6 0%, #c0d9f3 74%);
+  }
+}
