@@ -13,4 +13,4 @@ This mini project is a re-creation (i did my own style of Vanilla CSS code btw ð
 ## Credits
 [Coding Nepal](https://www.codingnepalweb.com/) for the HTML template.
 
-## Coded by [Dan Veranga](https://www.facebook.com/jc.saroza.3/).
+Coded by [Dan Veranga](https://www.facebook.com/jc.saroza.3/).
